@@ -23,6 +23,11 @@ const client = new OpenAI({
 });
 
 
+app.get("/", (req, res) => {
+  res.send("Backend is running....");
+});
+
+
 app.post('/api/generate',async(req,res)=>{
     try{
         const {prompt}=req.body;
